@@ -305,7 +305,7 @@ const VersionView: React.FC<Props> = ({ collection, global }) => {
             fields={fields}
             locales={
               locales
-                ? locales.map(({ label }) => (typeof label === 'string' ? label : undefined))
+                ? locales.map(({ value }) => (typeof value === 'string' ? value : undefined))
                 : []
             }
             version={doc?.version}

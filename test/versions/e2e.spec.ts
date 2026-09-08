@@ -51,6 +51,7 @@ import {
   draftCollectionSlug,
   draftGlobalSlug,
   postCollectionSlug,
+  versionCollectionSlug,
 } from './slugs'
 
 const { beforeAll, beforeEach, describe } = test
@@ -311,6 +312,62 @@ describe('versions', () => {
     })
 
     // TODO: Check versions/:version-id view for collections / globals
+
+    test('localized version diff uses locale codes when labels differ', async () => {
+      const firstEnglishTitle = 'Localized diff EN 1'
+      const secondEnglishTitle = 'Localized diff EN 2'
+      const spanishTitle = 'Localized diff ES 1'
+
+      const doc = await payload.create({
+        collection: versionCollectionSlug,
+        data: {
+          description: 'Localized version diff',
+          title: firstEnglishTitle,
+        },
+      })
+
+      await payload.update({
+        id: doc.id,
+        collection: versionCollectionSlug,
+        data: {
+          title: spanishTitle,
+        },
+        locale: 'es',
+      })
+
+      await payload.update({
+        id: doc.id,
+        collection: versionCollectionSlug,
+        data: {
+          title: secondEnglishTitle,
+        },
+        locale: 'en',
+      })
+
+      const versions = await payload.findVersions({
+        collection: versionCollectionSlug,
+        locale: 'all',
+        sort: '-updatedAt',
+        where: {
+          parent: {
+            equals: doc.id,
+          },
+        },
+      })
+
+      await page.goto(
+        `${serverURL}/admin/collections/${versionCollectionSlug}/${doc.id}/versions/${versions.docs[1].id}`,
+      )
+
+      const englishDiff = page.locator('.text-diff').filter({ hasText: 'enTitle' })
+      const spanishDiff = page.locator('.text-diff').filter({ hasText: 'esTitle' })
+
+      await expect(englishDiff).toContainText(firstEnglishTitle)
+      await expect(englishDiff).toContainText(secondEnglishTitle)
+      await expect(spanishDiff).toContainText(spanishTitle)
+      await expect(englishDiff).not.toContainText('[No value]')
+      await expect(spanishDiff).not.toContainText('[No value]')
+    })
 
     test('global - has versions tab', async () => {
       const global = new AdminUrlUtil(serverURL, draftGlobalSlug)

@@ -30,7 +30,16 @@ export default buildConfigWithDefaults({
   indexSortableFields: true,
   localization: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
+    locales: [
+      {
+        code: 'en',
+        label: 'English',
+      },
+      {
+        code: 'es',
+        label: 'Spanish',
+      },
+    ],
   },
   onInit: async (payload) => {
     await clearAndSeedEverything(payload)
