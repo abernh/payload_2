@@ -515,8 +515,8 @@ importers:
         specifier: 2.11.2
         version: 2.11.2
       drizzle-kit:
-        specifier: 0.23.2-df9e596
-        version: 0.23.2-df9e596
+        specifier: 0.23.2
+        version: 0.23.2
       drizzle-orm:
         specifier: 0.32.1
         version: 0.32.1(@libsql/client@0.3.6)(@opentelemetry/api@1.8.0)(@types/pg@8.10.2)(@types/react@18.2.15)(pg@8.11.3)(react@18.2.0)
@@ -5460,8 +5460,8 @@ packages:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
 
-  drizzle-kit@0.23.2-df9e596:
-    resolution: {integrity: sha512-MOvoeDE1c05XGevXLqhRVu/TNHwueibPZqMUH/kG1v6DOHD5pB2poRpjphr4sjae2QDS6h+PU5pCfzqEa6le6Q==}
+  drizzle-kit@0.23.2:
+    resolution: {integrity: sha512-NWkQ7GD2OTbQ7HzcjsaCOf3n0tlFPSEAF38fvDpwDj8jRbGWGFtN2cD8I8wp4lU+5Os/oyP2xycTKGLHdPipUw==}
     hasBin: true
 
   drizzle-orm@0.32.1:
@@ -16045,7 +16045,7 @@ snapshots:
 
   dotenv@8.6.0: {}
 
-  drizzle-kit@0.23.2-df9e596:
+  drizzle-kit@0.23.2:
     dependencies:
       '@drizzle-team/brocli': 0.8.2
       '@esbuild-kit/esm-loader': 2.6.5
