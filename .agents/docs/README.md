@@ -8,7 +8,7 @@ Use `AGENTS.md` as the quick entry point.
 | Area | Document |
 |------|----------|
 | Local installation, test harness, and suite choice | [Local development](local-development.md) |
-| Localized fields in version comparisons | [Version comparison](version-comparison.md) |
+| Version comparison (locales and compact long fields) | [Version comparison](version-comparison.md) |
 | Canonical project terms | [Terminology](terminology.md) |
 | Architecture decisions | [ADRs](adr/README.md) |
 | Package release note template (global) | `~/.cursor/docs/release-notes.md` |

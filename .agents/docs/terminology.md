@@ -11,6 +11,8 @@ Canonical names for project plans, agent docs, and new code identifiers.
 | `PAYLOAD_DATABASE` | Env key selecting the suite database adapter (`mongoose`, `postgres`, and related keys in `buildConfigWithDefaults`) | Hardcoding adapter imports in suite configs |
 | `PAYLOAD_BUNDLER` | Env key selecting the Admin bundler (`webpack` default, or `vite`) | Assuming webpack is the only bundler under test |
 | Version comparison | The Admin UI view that compares one stored version with another document or version | Version diff page |
+| Compact field diff | Version comparison mode that keeps a short unchanged window around each change and replaces the rest with `[...{N}chars]` | Full-field-only diff |
+| Omission marker | The shared `[...{N}chars]` token inserted for omitted unchanged text in a compact field diff | Ellipsis placeholder |
 | Release notes | The package release write-up for a tagged range, using `~/.cursor/docs/release-notes.md` | Changelog dump |
 | Fork versioning | Package versions on this fork add 100 to the upstream v2 minor (`2.32.x` → `2.132.x`) | Matching the upstream package version on this fork |
 | `main_v2` | Development branch for this fork | `main` |
