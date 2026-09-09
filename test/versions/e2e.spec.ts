@@ -369,6 +369,71 @@ describe('versions', () => {
       await expect(spanishDiff).not.toContainText('[No value]')
     })
 
+    test('long text version diff can toggle between compact and full content', async () => {
+      const lead = 'L'.repeat(150)
+      const midHead = 'M'.repeat(100)
+      const midOmit = `OMIT_${'X'.repeat(25)}_SENTINEL`
+      const midTail = 'N'.repeat(100)
+      const mid = `${midHead}${midOmit}${midTail}`
+      const trail = 'T'.repeat(150)
+      const firstDescription = `${lead}ONE${mid}AAA${trail}`
+      const secondDescription = `${lead}TWO${mid}BBB${trail}`
+      const title = `Long diff ${Date.now()}`
+
+      const doc = await payload.create({
+        collection: versionCollectionSlug,
+        data: {
+          description: firstDescription,
+          title,
+        },
+      })
+
+      await payload.update({
+        id: doc.id,
+        collection: versionCollectionSlug,
+        data: {
+          description: secondDescription,
+        },
+      })
+
+      const versions = await payload.findVersions({
+        collection: versionCollectionSlug,
+        sort: '-updatedAt',
+        where: {
+          parent: {
+            equals: doc.id,
+          },
+        },
+      })
+
+      await page.goto(
+        `${serverURL}/admin/collections/${versionCollectionSlug}/${doc.id}/versions/${versions.docs[1].id}`,
+      )
+
+      const descriptionDiff = page.locator('.text-diff').filter({ hasText: 'Description' })
+      const toggle = descriptionDiff.locator('.text-diff__toggle')
+
+      await expect(descriptionDiff).toContainText('ONE')
+      await expect(descriptionDiff).toContainText('TWO')
+      await expect(descriptionDiff).toContainText('[...50chars]')
+      await expect(descriptionDiff).toContainText('[...39chars]')
+      await expect(descriptionDiff).not.toContainText('SENTINEL')
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false')
+      await expect(toggle).toHaveText('Show All')
+
+      await toggle.click()
+      await expect(toggle).toHaveAttribute('aria-expanded', 'true')
+      await expect(toggle).toHaveText('Collapse')
+      await expect(descriptionDiff).toContainText('SENTINEL')
+      await expect(descriptionDiff).not.toContainText('[...50chars]')
+      await expect(descriptionDiff).not.toContainText('[...39chars]')
+
+      await toggle.click()
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false')
+      await expect(descriptionDiff).toContainText('[...50chars]')
+      await expect(descriptionDiff).not.toContainText('SENTINEL')
+    })
+
     test('global - has versions tab', async () => {
       const global = new AdminUrlUtil(serverURL, draftGlobalSlug)
       await page.goto(global.global(draftGlobalSlug))

@@ -12,4 +12,21 @@
     padding: base(0.25);
     border-radius: $style-radius-m;
   }
+
+  .field-diff-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: base(0.25);
+  }
+
+  &__label-content {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__toggle {
+    font-weight: normal;
+  }
 }

@@ -8,8 +8,8 @@ export const diffStyles = {
       emptyLineBackground: 'var(--theme-elevation-50)',
       removedBackground: 'var(--theme-error-900)',
       removedColor: 'var(--theme-error-100)',
-      wordAddedBackground: 'var(--theme-success-800)',
-      wordRemovedBackground: 'var(--theme-error-800)',
+      wordAddedBackground: 'var(--theme-success-600)',
+      wordRemovedBackground: 'var(--theme-error-400)',
     },
     light: {
       addedBackground: 'var(--theme-success-100)',
@@ -19,8 +19,12 @@ export const diffStyles = {
       emptyLineBackground: 'var(--theme-elevation-50)',
       removedBackground: 'var(--theme-error-100)',
       removedColor: 'var(--theme-error-900)',
-      wordAddedBackground: 'var(--theme-success-200)',
-      wordRemovedBackground: 'var(--theme-error-200)',
+      wordAddedBackground: 'var(--theme-success-600)',
+      wordRemovedBackground: 'var(--theme-error-400)',
     },
+  },
+  // Library default is inline-flex; that wraps long CHARS hunks onto solo lines.
+  wordDiff: {
+    display: 'inline',
   },
 }
