@@ -1,6 +1,6 @@
 coverage
 package-lock.json
-dist
+#dist - remove to allow for builds
 /.idea/*
 !/.idea/runConfigurations
 .turbo
