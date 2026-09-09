@@ -1,21 +1,43 @@
+## [2.132.5](https://github.com/abernh/payload/compare/payload@2.132.4...payload@2.132.5) (2026-09-09)
+
+
+### Features
+
+* compact long text in version field diffs ([cfa54cf](https://github.com/abernh/payload/commit/cfa54cf95135a18b08c62b2088c9f4ad2b1f54ae))
+
+
+### Documentation
+
+* point agents at changelog, releases, and `.agents` plans ([c1226cc](https://github.com/abernh/payload/commit/c1226cc5cbf55ac981ca9cdf515ccad3f19500f1))
+* record compact long-field version diff decision ([d08662d](https://github.com/abernh/payload/commit/d08662debfe9974b7ed84723734e764b0e53e9c1))
+* document feature-suite local dev environments ([5845bb2](https://github.com/abernh/payload/commit/5845bb2b14a4176c4e748d1ed538e26aad781d26))
+* align agent notes with fork branches and release template ([799ed79](https://github.com/abernh/payload/commit/799ed79c55fc217ba73a998f8e3f2342028ac2dd))
+* document unofficial fork policy, branches, and versioning ([892f85d](https://github.com/abernh/payload/commit/892f85dd9c3c30ada28f1dc14bd9a8017df0b168))
+
+
+### Chores
+
+* move plans and issues into `.agents/*` ([614e079](https://github.com/abernh/payload/commit/614e07909d1ed1697c0f05dc8fb44afae9fb46dc))
+* park fork CI and release automation tracker ([39081cd](https://github.com/abernh/payload/commit/39081cdcc6ae5c3f0b706c6ef7b7685f94b23a99))
+
+
 ## [2.132.4](https://github.com/abernh/payload/compare/db-mongodb@2.0.1...payload@2.132.4) (2026-09-09)
 
 
-### 🐛 Bug Fixes
+### Bug Fixes
 
 * show localized values in version comparisons ([b4914cd](https://github.com/abernh/payload/commit/b4914cdbc2e6b754d46d555457cbdb66d851ec87))
 * **db-postgres:** use published `drizzle-kit` release so clean installs succeed ([23513dc](https://github.com/abernh/payload/commit/23513dc9f8408a084832efe5cced174590c1cbcc))
 
 
-### ⚙️ Chores
+### Chores
 
 * allow configurable Payload test-dev port via `PORT` ([dab1249](https://github.com/abernh/payload/commit/dab1249d6d465ee4d362262ff7dc905565a18b46))
 
 
-### 📝 Documentation
+### Documentation
 
 * add project agent knowledge base ([effff88](https://github.com/abernh/payload/commit/effff886326f385a9e9e301238e9c5ab31d0eebf))
-* document unofficial fork policy, branches, and versioning ([892f85d](https://github.com/abernh/payload/commit/892f85dd9c3c30ada28f1dc14bd9a8017df0b168))
 
 
 ## [2.32.3](https://github.com/payloadcms/payload/compare/v2.32.2...v2.32.3) (2025-05-08)
