@@ -1,0 +1,17 @@
+import React from 'react';
+import type { Field } from '../../../../exports/types';
+import type { Props } from './types';
+import './index.scss';
+export type ReduceClientFieldsArgs = {
+    fields: Field[];
+    i18n: any;
+    labelPrefix?: string;
+    pathPrefix?: string;
+};
+/**
+ * The WhereBuilder component is used to render the filter controls for a collection's list view.
+ * It is part of the {@link ListControls} component which is used to render the controls (search, filter, where).
+ */
+declare const WhereBuilder: React.FC<Props>;
+export default WhereBuilder;
+//# sourceMappingURL=index.d.ts.map
