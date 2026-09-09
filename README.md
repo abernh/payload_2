@@ -1,3 +1,10 @@
+> [!IMPORTANT]
+> **Unofficial Payload v2 maintenance fork.** This repository exists to keep Payload CMS **v2** usable a little longer for our own work. It is public so you can use the code if it helps you, but it is **not** an official Payload project and comes with **no warranties** of any kind. Please treat it as a private maintenance effort that happens to be visible: do not open issues, pull requests, or support requests here expecting a reply. If the code is useful, take it. If it is not, feel free to move on. For the official project, see [payloadcms/payload](https://github.com/payloadcms/payload).
+>
+> **Branches:** development lives on `main_v2`. Packaged releases are cut from `release_v2`. Upstream Payload v2 is tracked from the official `2.x` branch.
+>
+> **Versioning:** package versions on this fork add **100 to the minor** of the related upstream v2 line (example: upstream-style `2.32.x` becomes `2.132.x` here). That keeps numbers familiar, makes the fork unmistakable in lockfiles, and leaves room to pull further upstream v2 updates without colliding on the same version.
+
 <a href="https://payloadcms.com"><img width="100%" src="https://github.com/payloadcms/payload/blob/main/packages/payload/src/admin/assets/images/github-banner-alt.jpg?raw=true" alt="Payload headless CMS Admin panel built with React" /></a>
 <br />
 <br />
@@ -15,9 +22,6 @@
 <a target="_blank" href="https://payloadcms.com/docs/getting-started/what-is-payload" rel="dofollow"><strong>Explore the Docs</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://payloadcms.com/community-help" rel="dofollow"><strong>Community Help</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://demo.payloadcms.com/" rel="dofollow"><strong>Try Live Demo</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://github.com/payloadcms/payload/discussions/1539" rel="dofollow"><strong>Roadmap</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://www.g2.com/products/payload-cms/reviews#reviews" rel="dofollow"><strong>View G2 Reviews</strong></a>
 </h4>
 <hr/>
-
-> [!IMPORTANT]
-> 🎉 <strong>Payload 3.0 beta released!</strong> You can now deploy Payload fully in any Next.js app folder. Read more in the <a target="_blank" href="https://payloadcms.com/blog/30-beta-install-payload-into-any-nextjs-app-with-one-line" rel="dofollow"><strong>announcement post</strong></a>.
 
 <h3>Benefits over a regular CMS</h3>
 <ul>

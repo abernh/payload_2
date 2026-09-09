@@ -1,3 +1,12 @@
+## [2.132.4](https://github.com/abernh/payload/compare/db-mongodb@2.0.1...payload@2.132.4) (2026-09-09)
+
+
+### Bug Fixes
+
+* show localized values in version comparisons ([b4914cd](https://github.com/abernh/payload/commit/b4914cdbc2e6b754d46d555457cbdb66d851ec87))
+* **db-postgres:** use published `drizzle-kit` release so clean installs succeed ([23513dc](https://github.com/abernh/payload/commit/23513dc9f8408a084832efe5cced174590c1cbcc))
+
+
 ## [2.32.3](https://github.com/payloadcms/payload/compare/v2.32.2...v2.32.3) (2025-05-08)
 
 

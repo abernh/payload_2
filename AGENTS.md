@@ -10,6 +10,7 @@ Project agent knowledge lives under `.agents/`.
 - [Local development](.agents/docs/local-development.md)
 - [Version comparison](.agents/docs/version-comparison.md)
 - [Terminology](.agents/docs/terminology.md)
+- Release notes template: `~/.cursor/docs/release-notes.md`
 
 Keep `AGENTS.md` short. Put durable area details in `.agents/docs/`, behavior in
 tests, and session plans under `.cursor/plans/`.
@@ -87,6 +88,11 @@ test/<suite>/
   display-only. See [Version comparison](.agents/docs/version-comparison.md).
 - The Postgres adapter must reference published dependencies so a clean root
   install remains possible.
+- Write package release notes with the shared template in
+  `~/.cursor/docs/release-notes.md`.
+- This fork develops on `main_v2`, releases from `release_v2`, and tracks
+  upstream Payload v2 from `2.x`. Package versions add 100 to the upstream
+  minor (`2.32.x` → `2.132.x`). See the top notice in `README.md`.
 
 ## Working rules
 

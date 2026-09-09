@@ -10,6 +10,7 @@ Use `AGENTS.md` as the quick entry point.
 | Local installation and test dev server | [Local development](local-development.md) |
 | Localized fields in version comparisons | [Version comparison](version-comparison.md) |
 | Canonical project terms | [Terminology](terminology.md) |
+| Package release note template (global) | `~/.cursor/docs/release-notes.md` |
 
 ## Repository boundaries
 
