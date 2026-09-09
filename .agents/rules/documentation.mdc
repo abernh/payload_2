@@ -11,10 +11,12 @@ Home ADR: ~/.cursor/docs/adr/0010-ste-writing-for-agent-docs.md
 
 | Setting | Value |
 |---------|-------|
-| Docs root (agents) | `.agents/docs/` (legacy `.cursor/docs/`) |
+| Docs root (agents) | `.agents/docs/` |
 | Hub doc | `.agents/docs/README.md` |
 | ADRs | `.agents/docs/adr/` |
 | Terminology | `.agents/docs/terminology.md` |
+| Plans | `.agents/plans/` |
+| Deferred issues | `.agents/issues/` |
 | Human docs | `docs/`, `CONTRIBUTING.md` - do not edit |
 
 ## Altitude
@@ -41,3 +43,5 @@ Apply the skill STE section and reference STE checklist to new and edited agent 
 | New area | `.agents/docs/{slug}.md` + hub link |
 | Decision | `.agents/docs/adr/NNNN-{slug}.md` |
 | Terminology | `.agents/docs/terminology.md` |
+| Session plan | `.agents/plans/{slug}.plan.md` |
+| Deferred issue | `.agents/issues/{slug}.md` |

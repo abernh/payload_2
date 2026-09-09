@@ -1,7 +1,7 @@
 # Fork CI gate and tag-based GitHub Releases
 
 **Status:** deferred (not current priority)  
-**Plan:** [`.cursor/plans/fork-ci-release-automation.plan.md`](../plans/fork-ci-release-automation.plan.md)
+**Plan:** [`.agents/plans/fork-ci-release-automation.plan.md`](../plans/fork-ci-release-automation.plan.md)
 
 ## Intent
 
