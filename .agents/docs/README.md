@@ -11,7 +11,8 @@ Use `AGENTS.md` as the quick entry point.
 | Version comparison (locales and compact long fields) | [Version comparison](version-comparison.md) |
 | Canonical project terms | [Terminology](terminology.md) |
 | Architecture decisions | [ADRs](adr/README.md) |
-| Package release note template (global) | `~/.cursor/docs/release-notes.md` |
+| Changelog (no emoji headers) | Root `CHANGELOG.md` |
+| Package release notes (`releases/*.md`) | `~/.cursor/docs/release-notes.md` |
 
 ## Repository boundaries
 
@@ -19,8 +20,9 @@ Use `AGENTS.md` as the quick entry point.
 - Core Payload runtime and Admin UI source live under `packages/payload/src/`.
 - Feature suites live under `test/<suite>/` and act as local development environments.
 - Product documentation lives under `docs/` (human-owned).
-- Project agent rules, docs, and lessons live under `.agents/`.
-- Executable session plans remain under `.cursor/plans/` when present.
+- Project agent rules, docs, lessons, plans, and deferred issues live under `.agents/`.
+- Executable session plans: `.agents/plans/`. Deferred issues: `.agents/issues/`.
+- Optional IDE adapter: `.cursor/{rules,docs,lessons-learned,plans,issues}` may symlink into `.agents/`.
 
 ## Documentation rule
 

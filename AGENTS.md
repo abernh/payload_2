@@ -11,10 +11,12 @@ Project agent knowledge lives under `.agents/`.
 - [Version comparison](.agents/docs/version-comparison.md)
 - [Terminology](.agents/docs/terminology.md)
 - [ADRs](.agents/docs/adr/README.md)
-- Release notes template: `~/.cursor/docs/release-notes.md`
+- Changelog: root `CHANGELOG.md` (conventional sections, no emoji headers)
+- Release notes: `releases/<package>@<version>.md` (emoji sections; template `~/.cursor/docs/release-notes.md`)
 
 Keep `AGENTS.md` short. Put durable area details in `.agents/docs/`, behavior in
-tests, and session plans under `.cursor/plans/`.
+tests, and session plans under `.agents/plans/`. Deferred issues live under
+`.agents/issues/`.
 
 ## Documentation preferences
 
@@ -113,8 +115,10 @@ test/<suite>/
   display-only. See [Version comparison](.agents/docs/version-comparison.md).
 - The Postgres adapter must reference published dependencies so a clean root
   install remains possible.
-- Write package release notes with the shared template in
-  `~/.cursor/docs/release-notes.md`.
+- For a package cut: update root `CHANGELOG.md` in conventional changelog
+  style (no emoji section headers), and write the GitHub release body under
+  `releases/<package>@<version>.md` using `~/.cursor/docs/release-notes.md`.
+  Do not rewrite the changelog to match the release emoji layout.
 - This fork develops on `main_v2`, releases from `release_v2`, and tracks
   upstream Payload v2 from `2.x`. Package versions add 100 to the upstream
   minor (`2.32.x` → `2.132.x`). See the top notice in `README.md`.
