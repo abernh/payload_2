@@ -9,3 +9,8 @@ Canonical names for project plans, agent docs, and new code identifiers.
 | Locale label | Display text for a locale, such as `English` or `Spanish` | Locale name when referring to stored keys |
 | Test dev server | The `pnpm dev <suite>` harness implemented by `test/dev.ts` | Package dev server |
 | Version comparison | The Admin UI view that compares one stored version with another document or version | Version diff page |
+| Release notes | The package release write-up for a tagged range, using `~/.cursor/docs/release-notes.md` | Changelog dump |
+| Fork versioning | Package versions on this fork add 100 to the upstream v2 minor (`2.32.x` → `2.132.x`) | Matching the upstream package version on this fork |
+| `main_v2` | Development branch for this fork | `main` |
+| `release_v2` | Branch used to cut packaged releases for this fork | `release` |
+| `2.x` | Upstream official Payload v2 branch | Treating `main_v2` as upstream |
