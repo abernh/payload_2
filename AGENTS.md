@@ -10,10 +10,35 @@ Project agent knowledge lives under `.agents/`.
 - [Local development](.agents/docs/local-development.md)
 - [Version comparison](.agents/docs/version-comparison.md)
 - [Terminology](.agents/docs/terminology.md)
+- [ADRs](.agents/docs/adr/README.md)
 - Release notes template: `~/.cursor/docs/release-notes.md`
 
 Keep `AGENTS.md` short. Put durable area details in `.agents/docs/`, behavior in
 tests, and session plans under `.cursor/plans/`.
+
+## Documentation preferences
+
+**Skill:** `maintain-documentation` (altitude required - see skill ADR 001)
+
+| Setting | Value |
+|---------|-------|
+| Agent docs root | `.agents/docs/` |
+| Hub doc | `.agents/docs/README.md` |
+| ADRs | `.agents/docs/adr/` |
+| Terminology | `.agents/docs/terminology.md` |
+| Human docs (no agent edits) | `docs/`, `CONTRIBUTING.md` |
+| Project documentation rule | `.agents/rules/documentation.mdc` |
+
+### Required (agent docs)
+
+- New functional blocks (high-level map entry)
+- Changed semantics or cross-module contracts
+- Behavior changes → ADR + thin area-doc pointer
+
+### Exempt / leave in code
+
+- CSS / copy-only; IDs; versions; exhaustive API/DOM listings
+- Human `docs/` tree and `CONTRIBUTING.md`
 
 ## Repository map
 

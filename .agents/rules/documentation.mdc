@@ -1,0 +1,43 @@
+---
+description: Agent documentation - orientation maps in .agents/docs
+alwaysApply: true
+---
+
+# Maintain documentation
+
+Follow **maintain-documentation** skill (altitude: orientation maps, not detail dumps; STE-flavored writing for new/edited docs).
+Skill ADR: maintain-documentation/adr/001-documentation-altitude.md
+Home ADR: ~/.cursor/docs/adr/0010-ste-writing-for-agent-docs.md
+
+| Setting | Value |
+|---------|-------|
+| Docs root (agents) | `.agents/docs/` (legacy `.cursor/docs/`) |
+| Hub doc | `.agents/docs/README.md` |
+| ADRs | `.agents/docs/adr/` |
+| Terminology | `.agents/docs/terminology.md` |
+| Human docs | `docs/`, `CONTRIBUTING.md` - do not edit |
+
+## Altitude
+
+Agent docs = orientation map. Details live in code, tests, and short ADRs.
+
+**Update** hub/area docs only when a major block/boundary is missing or wrong, or when a shipped decision needs an ADR + thin pointer.
+
+**Do not** store in area docs: version pins, ephemeral IDs, CSS/DOM dumps, changelogs, pilot metrics, full cookbooks, secrets, or planned behavior.
+
+**Exception:** `terminology.md` may hold proposed + current + deprecated names for plans and docs. See rule `terminology.mdc` and home ADR 0016.
+
+## Writing style (STE-flavored)
+
+Apply the skill STE section and reference STE checklist to new and edited agent docs: active voice, sentence length caps, no marketing filler, self-lint before done. One name per thing via terminology.md.
+
+## Routing (agents)
+
+| Topic | Doc |
+|-------|-----|
+| Hub | `.agents/docs/README.md` |
+| Local development | `.agents/docs/local-development.md` |
+| Version comparison | `.agents/docs/version-comparison.md` |
+| New area | `.agents/docs/{slug}.md` + hub link |
+| Decision | `.agents/docs/adr/NNNN-{slug}.md` |
+| Terminology | `.agents/docs/terminology.md` |
